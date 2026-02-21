@@ -717,6 +717,44 @@
 
     .about-right {}
 
+    .founder-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 28px 24px 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .founder-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid var(--orange);
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .founder-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.03em;
+      margin-bottom: 5px;
+    }
+
+    .founder-title {
+      font-size: 10px;
+      color: var(--orange);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
     .tools-block {
       background: var(--white);
       border: 1px solid var(--border);
@@ -1338,8 +1376,7 @@
 
     @media (max-width: 768px) {
       .nav { padding: 0 24px; }
-      .nav-links { display: none; }
-      .nav-links.open {
+      .nav-links {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -1348,6 +1385,15 @@
         padding: 16px 24px 24px;
         border-bottom: 1px solid rgba(255,255,255,0.08);
         gap: 4px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+      }
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
       }
       .nav-links.open .dropdown {
         position: static;
@@ -1603,21 +1649,13 @@
         </div>
 
         <div class="about-right">
-          <div class="tools-block animate">
-            <div class="tools-header">Verktyg &amp; modeller vi använder</div>
-            <div class="tools-list">
-              <div class="tool-item">EQi 2.0</div>
-              <div class="tool-item">Corestrengths / SDI</div>
-              <div class="tool-item">Wallbreaker</div>
-              <div class="tool-item">Bridgebuilder</div>
-              <div class="tool-item">Förändringens fyra rum</div>
-              <div class="tool-item">Öppna fönster</div>
-              <div class="tool-item">5 dysfunctions of a team</div>
-              <div class="tool-item">S. Wheelan</div>
-            </div>
+          <div class="founder-card animate">
+            <img src="jens-hector.jpg" alt="Jens Hector, grundare Ignicon" class="founder-img">
+            <div class="founder-name">Jens Hector</div>
+            <div class="founder-title">Grundare &amp; VD</div>
           </div>
 
-          <div class="partners-block animate">
+<div class="partners-block animate">
             <div class="partners-header">Samarbetspartners</div>
             <div class="partners-list">
               <span class="partner-tag">OneLeadership</span>
@@ -1693,24 +1731,24 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Namn</label>
-                <input type="text" id="name" placeholder="Ditt namn" required>
+                <input type="text" id="name" name="name" placeholder="Ditt namn" required>
               </div>
               <div class="form-group">
                 <label for="company">Företag</label>
-                <input type="text" id="company" placeholder="Organisation">
+                <input type="text" id="company" name="company" placeholder="Organisation">
               </div>
             </div>
             <div class="form-group">
               <label for="email">E-post</label>
-              <input type="email" id="email" placeholder="din@epost.se" required>
+              <input type="email" id="email" name="email" placeholder="din@epost.se" required>
             </div>
             <div class="form-group">
               <label for="phone">Telefon</label>
-              <input type="tel" id="phone" placeholder="+46 70 000 00 00">
+              <input type="tel" id="phone" name="phone" placeholder="+46 70 000 00 00">
             </div>
             <div class="form-group">
               <label for="service">Tjänst</label>
-              <select id="service">
+              <select id="service" name="service">
                 <option value="">Välj ett område...</option>
                 <option>Ledarskapsträning</option>
                 <option>Ledarskapscoaching</option>
@@ -1723,7 +1761,7 @@
             </div>
             <div class="form-group">
               <label for="message">Meddelande</label>
-              <textarea id="message" placeholder="Berätta kort om er organisation och vad ni önskar hjälp med..."></textarea>
+              <textarea id="message" name="message" placeholder="Berätta kort om er organisation och vad ni önskar hjälp med..."></textarea>
             </div>
             <button type="submit" class="form-submit">Skicka meddelande</button>
           </form>
@@ -1963,11 +2001,30 @@
       nav.classList.toggle('scrolled', window.scrollY > 20);
     });
 
-    // ── Mobile menu
+    // ── Mobile menu (hover + click fallback för touch)
     function toggleMenu() {
       const links = document.getElementById('navLinks');
       links.classList.toggle('open');
     }
+
+    (function () {
+      const burger = document.getElementById('navBurger');
+      const links  = document.getElementById('navLinks');
+      let hideTimer;
+
+      function showMenu() {
+        clearTimeout(hideTimer);
+        links.classList.add('open');
+      }
+      function hideMenu() {
+        hideTimer = setTimeout(() => links.classList.remove('open'), 200);
+      }
+
+      burger.addEventListener('mouseenter', showMenu);
+      links.addEventListener('mouseenter',  showMenu);
+      burger.addEventListener('mouseleave', hideMenu);
+      links.addEventListener('mouseleave',  hideMenu);
+    })();
 
     // ── Scroll animations
     const observer = new IntersectionObserver((entries) => {
@@ -2002,11 +2059,30 @@
       });
     });
 
-    // ── Form handler (demo)
-    function handleSubmit(e) {
+    // ── Form handler (Formspree)
+    async function handleSubmit(e) {
       e.preventDefault();
-      document.querySelector('form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
+      const form = e.target;
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Skickar...';
+      btn.disabled = true;
+      try {
+        const response = await fetch('https://formspree.io/f/mzdajvaw', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          btn.textContent = 'Något gick fel – försök igen';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Något gick fel – försök igen';
+        btn.disabled = false;
+      }
     }
 
     // ── Smooth close dropdown on link click
