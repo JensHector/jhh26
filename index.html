@@ -179,8 +179,12 @@
       height: 2px;
       background: var(--white);
       border-radius: 2px;
-      transition: 0.3s;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* ── HERO ── */
     .hero {
@@ -2003,9 +2007,21 @@
 
     // ── Mobile menu (hover + click fallback för touch)
     function toggleMenu() {
-      const links = document.getElementById('navLinks');
+      const links  = document.getElementById('navLinks');
+      const burger = document.getElementById('navBurger');
       links.classList.toggle('open');
+      burger.classList.toggle('open');
     }
+
+    // Stäng menyn vid klick/tap utanför
+    document.addEventListener('click', function(e) {
+      const burger = document.getElementById('navBurger');
+      const links  = document.getElementById('navLinks');
+      if (!burger.contains(e.target) && !links.contains(e.target)) {
+        links.classList.remove('open');
+        burger.classList.remove('open');
+      }
+    });
 
     (function () {
       const burger = document.getElementById('navBurger');
