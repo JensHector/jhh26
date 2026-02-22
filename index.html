@@ -1732,6 +1732,8 @@
 
         <div class="contact-form animate">
           <form onsubmit="handleSubmit(event)">
+            <input type="hidden" name="_subject" value="Ny förfrågan via ignicon.se">
+            <input type="hidden" name="_replyto" id="replyto-field">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Namn</label>
@@ -2110,6 +2112,9 @@
     async function handleSubmit(e) {
       e.preventDefault();
       const form = e.target;
+      // Kopiera avsändarens e-post till _replyto så du kan svara direkt
+      const emailVal = form.querySelector('#email').value;
+      document.getElementById('replyto-field').value = emailVal;
       const btn = form.querySelector('.form-submit');
       btn.textContent = 'Skickar...';
       btn.disabled = true;
