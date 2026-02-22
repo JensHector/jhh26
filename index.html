@@ -2040,6 +2040,37 @@
       links.addEventListener('mouseenter',  showMenu);
       burger.addEventListener('mouseleave', hideMenu);
       links.addEventListener('mouseleave',  hideMenu);
+
+      // ── Touch (mobil) – fingret ned = visa, fingret upp = tona bort
+      function showMenuFull() {
+        clearTimeout(hideTimer);
+        links.classList.add('open');
+        burger.classList.add('open');
+      }
+      function hideMenuFull(delay) {
+        hideTimer = setTimeout(() => {
+          links.classList.remove('open');
+          burger.classList.remove('open');
+        }, delay);
+      }
+
+      burger.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        showMenuFull();
+      }, { passive: false });
+
+      burger.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        hideMenuFull(400);
+      }, { passive: false });
+
+      links.addEventListener('touchstart', function() {
+        clearTimeout(hideTimer);
+      });
+
+      links.addEventListener('touchend', function() {
+        hideMenuFull(200);
+      });
     })();
 
     // ── Scroll animations
@@ -2143,5 +2174,3 @@
   </script>
 </body>
 </html>
-
-
