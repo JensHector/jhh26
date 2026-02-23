@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ledarskapsutveckling & Grupputveckling | Ignicon AB</title>
-  <meta name="description" content="Ignicon hjälper chefer, ledare, team och ledningsgrupper att nå framdrift i sina organisationer grundat på mod, nyfikenhet, tillit och tydlighet.">
+  <meta name="description" content="Ignicon hjÃ¤lper chefer, ledare, team och ledningsgrupper att nÃ¥ framdrift i sina organisationer grundat pÃ¥ mod, nyfikenhet, tillit och tydlighet.">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
 
   <style>
-    /* ── RESET & ROOT ── */
+    /* ââ RESET & ROOT ââ */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
@@ -32,7 +32,7 @@
       line-height: 1.65;
     }
 
-    /* ── NAVIGATION ── */
+    /* ââ NAVIGATION ââ */
     .nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -186,7 +186,7 @@
     .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* ── HERO ── */
+    /* ââ HERO ââ */
     .hero {
       background: var(--navy);
       min-height: 100vh;
@@ -321,7 +321,7 @@
       border-color: rgba(255,255,255,0.5);
     }
 
-    /* Hero right – pillars */
+    /* Hero right â pillars */
     .hero-pillars {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -377,7 +377,7 @@
       font-weight: 300;
     }
 
-    /* ── CLIENTS ── */
+    /* ââ CLIENTS ââ */
     .clients {
       background: var(--beige-dark);
       padding: 60px 48px;
@@ -430,7 +430,7 @@
       opacity: 0.5;
     }
 
-    /* ── SECTIONS SHARED ── */
+    /* ââ SECTIONS SHARED ââ */
     .section {
       padding: 96px 48px;
     }
@@ -474,7 +474,7 @@
       border-radius: 2px;
     }
 
-    /* ── SERVICES ── */
+    /* ââ SERVICES ââ */
     .services {
       background: var(--white);
     }
@@ -601,13 +601,13 @@
     }
 
     .service-list li::before {
-      content: '–';
+      content: 'â';
       position: absolute;
       left: 0;
       color: var(--orange);
     }
 
-    /* ── HOW WE WORK ── */
+    /* ââ HOW WE WORK ââ */
     .how {
       background: var(--navy);
       padding: 96px 48px;
@@ -671,7 +671,7 @@
       font-weight: 300;
     }
 
-    /* ── ABOUT ── */
+    /* ââ ABOUT ââ */
     .about {
       background: var(--beige);
     }
@@ -826,7 +826,7 @@
       border: 1px solid var(--border);
     }
 
-    /* ── CTA SECTION ── */
+    /* ââ CTA SECTION ââ */
     .cta-section {
       background: var(--orange);
       padding: 80px 48px;
@@ -903,7 +903,7 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.2);
     }
 
-    /* ── CONTACT ── */
+    /* ââ CONTACT ââ */
     .contact {
       background: var(--white);
     }
@@ -1041,7 +1041,7 @@
       transform: translateY(-1px);
     }
 
-    /* ── FOOTER ── */
+    /* ââ FOOTER ââ */
     .footer {
       background: var(--navy);
       padding: 60px 48px 32px;
@@ -1152,7 +1152,7 @@
       letter-spacing: 0.06em;
     }
 
-    /* ── SERVICE MODALS ── */
+    /* ââ SERVICE MODALS ââ */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -1294,7 +1294,7 @@
     .modal-list li:last-child { border-bottom: none; }
 
     .modal-list li::before {
-      content: '–';
+      content: 'â';
       position: absolute;
       left: 0;
       color: var(--orange);
@@ -1352,7 +1352,7 @@
       .modal-body { padding: 24px 20px; }
     }
 
-    /* ── ANIMATIONS ── */
+    /* ââ ANIMATIONS ââ */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -1367,7 +1367,7 @@
       animation: fadeUp 0.6s ease forwards;
     }
 
-    /* ── RESPONSIVE ── */
+    /* ââ RESPONSIVE ââ */
     @media (max-width: 1024px) {
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .hero-pillars { display: grid; grid-template-columns: 1fr 1fr; }
@@ -1436,7 +1436,7 @@
 </head>
 <body>
 
-  <!-- ══ NAVIGATION ══ -->
+  <!-- ââ NAVIGATION ââ -->
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
@@ -1449,14 +1449,14 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="active">Hem</a></li>
         <li class="has-dropdown">
-          <a href="#services">Tjänster</a>
+          <a href="#services">TjÃ¤nster</a>
           <div class="dropdown">
-            <a href="#services">Ledarskapsträning</a>
-            <a href="#services">Ledarskapscoaching</a>
-            <a href="#services">Ledningsgruppsutveckling</a>
-            <a href="#services">Grupputveckling</a>
-            <a href="#services">Workshops</a>
-            <a href="#services">Föreläsningar</a>
+            <a href="#" onclick="openModal('modal-ledarskap'); return false;">Ledarskapsträning</a>
+            <a href="#" onclick="openModal('modal-coaching'); return false;">Ledarskapscoaching</a>
+            <a href="#" onclick="openModal('modal-ledningsgrupp'); return false;">Ledningsgruppsutveckling</a>
+            <a href="#" onclick="openModal('modal-grupputveckling'); return false;">Grupputveckling</a>
+            <a href="#" onclick="openModal('modal-workshops'); return false;">Workshops</a>
+            <a href="#" onclick="openModal('modal-forelasningar'); return false;">Föreläsningar</a>
             <a href="#services">Exempel på uppdrag</a>
           </div>
         </li>
@@ -1472,18 +1472,18 @@
     </div>
   </nav>
 
-  <!-- ══ HERO ══ -->
+  <!-- ââ HERO ââ -->
   <section class="hero" id="hero">
     <div class="hero-decor-2"></div>
     <div class="hero-inner">
       <div class="hero-content">
         <p class="hero-label">Ledarskapsutveckling &amp; Grupputveckling</p>
-        <h1>Stärk ert ledarskap –<br><em>Utveckla era grupper</em></h1>
-        <p class="hero-desc">Ignicon hjälper chefer, ledare, team och ledningsgrupper att nå framdrift i sina organisationer grundat på mod, nyfikenhet, tillit och tydlighet.</p>
-        <p class="hero-desc-2">Genom målmedvetna insatser, beprövad erfarenhet och den mest effektiva pedagogiken utvecklar vi era ledare och grupper – hela vägen till resultat.</p>
+        <h1>StÃ¤rk ert ledarskap â<br><em>Utveckla era grupper</em></h1>
+        <p class="hero-desc">Ignicon hjÃ¤lper chefer, ledare, team och ledningsgrupper att nÃ¥ framdrift i sina organisationer grundat pÃ¥ mod, nyfikenhet, tillit och tydlighet.</p>
+        <p class="hero-desc-2">Genom mÃ¥lmedvetna insatser, beprÃ¶vad erfarenhet och den mest effektiva pedagogiken utvecklar vi era ledare och grupper â hela vÃ¤gen till resultat.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">Kontakta oss</a>
-          <a href="#services" class="btn-ghost">Se våra tjänster →</a>
+          <a href="#services" class="btn-ghost">Se vÃ¥ra tjÃ¤nster â</a>
         </div>
       </div>
 
@@ -1493,37 +1493,37 @@
             <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
           <div class="pillar-title">Mod</div>
-          <div class="pillar-text">Att våga leda med tydlighet och stå upp för rätt beslut.</div>
+          <div class="pillar-text">Att vÃ¥ga leda med tydlighet och stÃ¥ upp fÃ¶r rÃ¤tt beslut.</div>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon">
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
           </div>
           <div class="pillar-title">Nyfikenhet</div>
-          <div class="pillar-text">Att alltid utforska nya perspektiv och utmana gamla mönster.</div>
+          <div class="pillar-text">Att alltid utforska nya perspektiv och utmana gamla mÃ¶nster.</div>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon">
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="pillar-title">Tillit</div>
-          <div class="pillar-text">Att bygga relationer och team grundade på äkta förtroende.</div>
+          <div class="pillar-text">Att bygga relationer och team grundade pÃ¥ Ã¤kta fÃ¶rtroende.</div>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon">
             <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="pillar-title">Tydlighet</div>
-          <div class="pillar-text">Att kommunicera mål, ansvar och förväntningar utan tvekan.</div>
+          <div class="pillar-text">Att kommunicera mÃ¥l, ansvar och fÃ¶rvÃ¤ntningar utan tvekan.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ CLIENT LOGOS ══ -->
+  <!-- ââ CLIENT LOGOS ââ -->
   <section class="clients">
     <div class="clients-inner">
-      <p class="clients-label">Företag som valt oss som en del av deras utveckling</p>
+      <p class="clients-label">FÃ¶retag som valt oss som en del av deras utveckling</p>
       <div class="clients-grid">
         <span class="client-name">Volvo</span>
         <span class="client-name">Sweco</span>
@@ -1539,40 +1539,40 @@
     </div>
   </section>
 
-  <!-- ══ SERVICES ══ -->
+  <!-- ââ SERVICES ââ -->
   <section class="section services" id="services">
     <div class="section-inner">
-      <p class="section-eyebrow animate">Våra tjänster</p>
-      <h2 class="section-title animate">Expertis som driver<br>verklig förändring</h2>
+      <p class="section-eyebrow animate">VÃ¥ra tjÃ¤nster</p>
+      <h2 class="section-title animate">Expertis som driver<br>verklig fÃ¶rÃ¤ndring</h2>
       <div class="section-divider animate"></div>
-      <p class="section-lead animate">Vi erbjuder skräddarsydda program och insatser för ledare, team och organisationer – baserade på vetenskapliga metoder och lång erfarenhet.</p>
+      <p class="section-lead animate">Vi erbjuder skrÃ¤ddarsydda program och insatser fÃ¶r ledare, team och organisationer â baserade pÃ¥ vetenskapliga metoder och lÃ¥ng erfarenhet.</p>
 
       <div class="services-grid">
         <div class="service-card animate">
-          <p class="service-number">01 / Ledarskapsträning</p>
-          <h3 class="service-title">Ledarskapsträning</h3>
-          <p class="service-text">Våra program för ledarskapsutveckling utrustar dig med den kompetens och förståelse som krävs för att vägleda en individ, ett team eller en organisation mot er vision och ambition. Med våra innovativa kurser och program kan du effektivt förverkliga dina eller era mål.</p>
-          <button onclick="openModal('modal-ledarskap')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">Läs mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <p class="service-number">01 / LedarskapstrÃ¤ning</p>
+          <h3 class="service-title">LedarskapstrÃ¤ning</h3>
+          <p class="service-text">VÃ¥ra program fÃ¶r ledarskapsutveckling utrustar dig med den kompetens och fÃ¶rstÃ¥else som krÃ¤vs fÃ¶r att vÃ¤gleda en individ, ett team eller en organisation mot er vision och ambition. Med vÃ¥ra innovativa kurser och program kan du effektivt fÃ¶rverkliga dina eller era mÃ¥l.</p>
+          <button onclick="openModal('modal-ledarskap')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">LÃ¤s mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
         </div>
 
         <div class="service-card animate">
           <p class="service-number">02 / Coaching</p>
           <h3 class="service-title">Ledarskapscoaching</h3>
-          <p class="service-text">Ledarskapscoaching ger dig möjlighet att finslipa dina färdigheter och förbättra dina förmågor som chef eller ledare. Vi hjälper dig att sätta upp mål, övervinna utmaningar, utveckla bättre precision i ledarskapet och skapa nya strategier för svåra situationer.</p>
-          <button onclick="openModal('modal-coaching')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">Läs mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <p class="service-text">Ledarskapscoaching ger dig mÃ¶jlighet att finslipa dina fÃ¤rdigheter och fÃ¶rbÃ¤ttra dina fÃ¶rmÃ¥gor som chef eller ledare. Vi hjÃ¤lper dig att sÃ¤tta upp mÃ¥l, Ã¶vervinna utmaningar, utveckla bÃ¤ttre precision i ledarskapet och skapa nya strategier fÃ¶r svÃ¥ra situationer.</p>
+          <button onclick="openModal('modal-coaching')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">LÃ¤s mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
         </div>
 
         <div class="service-card featured animate">
           <p class="service-number">03 / Ledningsgrupp</p>
           <h3 class="service-title">Ledningsgruppsutveckling</h3>
           <ul class="service-list">
-            <li>Tydliggör uppdrag, mandat och förväntningar</li>
-            <li>Synliggör och hanterar de vanligaste fallgroparna</li>
+            <li>TydliggÃ¶r uppdrag, mandat och fÃ¶rvÃ¤ntningar</li>
+            <li>SynliggÃ¶r och hanterar de vanligaste fallgroparna</li>
             <li>Utvecklar tillit, ansvarstagande och produktiv friktion</li>
             <li>Tar tillvara gruppens olikheter som en strategisk styrka</li>
           </ul>
           <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
-            <button onclick="openModal('modal-ledningsgrupp')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;color:var(--orange);">Läs mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+            <button onclick="openModal('modal-ledningsgrupp')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;color:var(--orange);">LÃ¤s mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
             <a href="#contact" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;letter-spacing:0.04em;" onclick="closeAllModals()">Kontakta oss</a>
           </div>
         </div>
@@ -1580,59 +1580,59 @@
         <div class="service-card animate">
           <p class="service-number">04 / Team</p>
           <h3 class="service-title">Grupputveckling</h3>
-          <p class="service-text">Våra grupp- och teamutvecklingsprogram är utformade för att hjälpa team att övervinna de 5 vanligaste problemen som hindrar dem från att bli riktigt effektiva. Din grupp utrustas med de färdigheter de behöver för att nå era strategiska mål.</p>
-          <button onclick="openModal('modal-grupputveckling')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">Läs mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <p class="service-text">VÃ¥ra grupp- och teamutvecklingsprogram Ã¤r utformade fÃ¶r att hjÃ¤lpa team att Ã¶vervinna de 5 vanligaste problemen som hindrar dem frÃ¥n att bli riktigt effektiva. Din grupp utrustas med de fÃ¤rdigheter de behÃ¶ver fÃ¶r att nÃ¥ era strategiska mÃ¥l.</p>
+          <button onclick="openModal('modal-grupputveckling')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">LÃ¤s mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
         </div>
 
         <div class="service-card animate">
           <p class="service-number">05 / Workshops</p>
           <h3 class="service-title">Workshops</h3>
-          <p class="service-text">Kämpar ni med hur ni ska gå vidare? Hur åstadkommer vi bäst förändring? Vilken kultur bör förstärkas? Med hjälp av våra workshopmetoder guidar vi er till svar på strategiska frågor och skapar konkreta handlingsplaner.</p>
-          <button onclick="openModal('modal-workshops')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">Läs mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <p class="service-text">KÃ¤mpar ni med hur ni ska gÃ¥ vidare? Hur Ã¥stadkommer vi bÃ¤st fÃ¶rÃ¤ndring? Vilken kultur bÃ¶r fÃ¶rstÃ¤rkas? Med hjÃ¤lp av vÃ¥ra workshopmetoder guidar vi er till svar pÃ¥ strategiska frÃ¥gor och skapar konkreta handlingsplaner.</p>
+          <button onclick="openModal('modal-workshops')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">LÃ¤s mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
         </div>
 
         <div class="service-card animate">
-          <p class="service-number">06 / Föreläsningar</p>
-          <h3 class="service-title">Föreläsningar</h3>
-          <p class="service-text">Utnyttja kraften i en inspirerande föreläsning vid ditt nästa möte eller konferens. Våra föreläsningar ger ett unikt och tankeväckande inslag som lyfter och förstärker er fortsatta dialog kring ledarskap, motivation och grupputveckling.</p>
-          <button onclick="openModal('modal-forelasningar')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">Läs mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <p class="service-number">06 / FÃ¶relÃ¤sningar</p>
+          <h3 class="service-title">FÃ¶relÃ¤sningar</h3>
+          <p class="service-text">Utnyttja kraften i en inspirerande fÃ¶relÃ¤sning vid ditt nÃ¤sta mÃ¶te eller konferens. VÃ¥ra fÃ¶relÃ¤sningar ger ett unikt och tankevÃ¤ckande inslag som lyfter och fÃ¶rstÃ¤rker er fortsatta dialog kring ledarskap, motivation och grupputveckling.</p>
+          <button onclick="openModal('modal-forelasningar')" class="service-link" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;">LÃ¤s mer <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ HOW WE WORK ══ -->
+  <!-- ââ HOW WE WORK ââ -->
   <section class="how">
     <div class="section-inner">
       <p class="section-eyebrow animate">Hur vi arbetar</p>
-      <h2 class="section-title animate">Beprövad erfarenhet –<br>hela vägen till resultat</h2>
+      <h2 class="section-title animate">BeprÃ¶vad erfarenhet â<br>hela vÃ¤gen till resultat</h2>
 
       <div class="how-grid">
         <div class="how-item animate">
           <div class="how-num">01</div>
           <div class="how-title">Behovsanalys</div>
-          <div class="how-text">Vi lyssnar noggrant och kartlägger era specifika utmaningar, mål och förutsättningar innan vi rekommenderar insats.</div>
+          <div class="how-text">Vi lyssnar noggrant och kartlÃ¤gger era specifika utmaningar, mÃ¥l och fÃ¶rutsÃ¤ttningar innan vi rekommenderar insats.</div>
         </div>
         <div class="how-item animate">
           <div class="how-num">02</div>
-          <div class="how-title">Skräddarsytt program</div>
-          <div class="how-text">Varje uppdrag designas utifrån er organisations unika behov med vetenskapligt förankrade verktyg och metoder.</div>
+          <div class="how-title">SkrÃ¤ddarsytt program</div>
+          <div class="how-text">Varje uppdrag designas utifrÃ¥n er organisations unika behov med vetenskapligt fÃ¶rankrade verktyg och metoder.</div>
         </div>
         <div class="how-item animate">
           <div class="how-num">03</div>
-          <div class="how-title">Genomförande</div>
-          <div class="how-text">Med genuint engagemang och utmanande förhållningssätt driver vi era ledare och grupper mot konkreta förändringar.</div>
+          <div class="how-title">GenomfÃ¶rande</div>
+          <div class="how-text">Med genuint engagemang och utmanande fÃ¶rhÃ¥llningssÃ¤tt driver vi era ledare och grupper mot konkreta fÃ¶rÃ¤ndringar.</div>
         </div>
         <div class="how-item animate">
           <div class="how-num">04</div>
-          <div class="how-title">Uppföljning</div>
-          <div class="how-text">Vi stöttar er i att förankra förändringen och säkerställer att resultaten håller och vidareutvecklas över tid.</div>
+          <div class="how-title">UppfÃ¶ljning</div>
+          <div class="how-text">Vi stÃ¶ttar er i att fÃ¶rankra fÃ¶rÃ¤ndringen och sÃ¤kerstÃ¤ller att resultaten hÃ¥ller och vidareutvecklas Ã¶ver tid.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ ABOUT ══ -->
+  <!-- ââ ABOUT ââ -->
   <section class="section about" id="about">
     <div class="section-inner">
       <div class="about-grid">
@@ -1641,15 +1641,15 @@
           <h2 class="section-title animate">Vi har erfarenheten<br>och verktygen</h2>
           <div class="section-divider animate"></div>
 
-          <p class="animate">Ignicon AB är ett företag som hjälper ledare, chefer, team, ledningsgrupper och organisationer att nå sin fulla potential. Detta gör vi genom att tillhandahålla utvecklingsprogram anpassade för er organisations specifika behov.</p>
+          <p class="animate">Ignicon AB Ã¤r ett fÃ¶retag som hjÃ¤lper ledare, chefer, team, ledningsgrupper och organisationer att nÃ¥ sin fulla potential. Detta gÃ¶r vi genom att tillhandahÃ¥lla utvecklingsprogram anpassade fÃ¶r er organisations specifika behov.</p>
 
-          <p class="animate">Vår gedigna erfarenhet att leda, facilitera och moderera grupper, i kombination med vetenskapliga och beprövade metoder, gör oss till en väldigt effektiv leverantör för att hjälpa er inom ledarskap och grupputveckling.</p>
+          <p class="animate">VÃ¥r gedigna erfarenhet att leda, facilitera och moderera grupper, i kombination med vetenskapliga och beprÃ¶vade metoder, gÃ¶r oss till en vÃ¤ldigt effektiv leverantÃ¶r fÃ¶r att hjÃ¤lpa er inom ledarskap och grupputveckling.</p>
 
           <div class="about-quote animate">
-            <div class="about-quote-text">"Vår tanke är att vara den mest nyfikna, engagerade och utmanande leverantören inom ledarskapsutveckling och grupputveckling i Norden."</div>
+            <div class="about-quote-text">"VÃ¥r tanke Ã¤r att vara den mest nyfikna, engagerade och utmanande leverantÃ¶ren inom ledarskapsutveckling och grupputveckling i Norden."</div>
           </div>
 
-          <p class="animate" style="font-size:15px; color:var(--gray-light);">— Jens Hector, grundare</p>
+          <p class="animate" style="font-size:15px; color:var(--gray-light);">â Jens Hector, grundare</p>
         </div>
 
         <div class="about-right">
@@ -1675,26 +1675,26 @@
     </div>
   </section>
 
-  <!-- ══ CTA ══ -->
+  <!-- ââ CTA ââ -->
   <section class="cta-section">
     <div class="cta-inner">
       <p class="cta-label">Kontakta oss idag</p>
-      <h2 class="cta-title">Redo att stärka ert ledarskap och era grupper?</h2>
-      <p class="cta-text">Vår stora erfarenhet inom ledarskap och grupputveckling i kombination med vetenskapliga verktyg ger oss optimala förutsättningar att vägleda er – hela vägen fram till resultat.</p>
+      <h2 class="cta-title">Redo att stÃ¤rka ert ledarskap och era grupper?</h2>
+      <p class="cta-text">VÃ¥r stora erfarenhet inom ledarskap och grupputveckling i kombination med vetenskapliga verktyg ger oss optimala fÃ¶rutsÃ¤ttningar att vÃ¤gleda er â hela vÃ¤gen fram till resultat.</p>
       <a href="#contact" class="btn-white">Kom i kontakt</a>
     </div>
   </section>
 
-  <!-- ══ CONTACT ══ -->
+  <!-- ââ CONTACT ââ -->
   <section class="section contact" id="contact">
     <div class="section-inner">
       <div class="contact-grid">
         <div class="contact-info">
           <p class="section-eyebrow animate">Kontakt</p>
-          <h2 class="section-title animate">Vi hjälper er gärna</h2>
+          <h2 class="section-title animate">Vi hjÃ¤lper er gÃ¤rna</h2>
           <div class="section-divider animate"></div>
 
-          <p class="animate" style="color:var(--gray); font-size:15px; margin-bottom:40px; line-height:1.7;">Med genuint engagemang, nyfikenhet och ett utmanande förhållningssätt hjälper vi er organisation att nå hela vägen fram till sin vision och ambition. Hör av er – vi ser fram emot ett samtal.</p>
+          <p class="animate" style="color:var(--gray); font-size:15px; margin-bottom:40px; line-height:1.7;">Med genuint engagemang, nyfikenhet och ett utmanande fÃ¶rhÃ¥llningssÃ¤tt hjÃ¤lper vi er organisation att nÃ¥ hela vÃ¤gen fram till sin vision och ambition. HÃ¶r av er â vi ser fram emot ett samtal.</p>
 
           <div class="contact-item animate">
             <div class="contact-icon">
@@ -1732,7 +1732,7 @@
 
         <div class="contact-form animate">
           <form onsubmit="handleSubmit(event)">
-            <input type="hidden" name="_subject" value="Ny förfrågan via ignicon.se">
+            <input type="hidden" name="_subject" value="Ny fÃ¶rfrÃ¥gan via ignicon.se">
             <input type="hidden" name="_replyto" id="replyto-field">
             <div class="form-row">
               <div class="form-group">
@@ -1740,7 +1740,7 @@
                 <input type="text" id="name" name="name" placeholder="Ditt namn" required>
               </div>
               <div class="form-group">
-                <label for="company">Företag</label>
+                <label for="company">FÃ¶retag</label>
                 <input type="text" id="company" name="company" placeholder="Organisation">
               </div>
             </div>
@@ -1753,34 +1753,34 @@
               <input type="tel" id="phone" name="phone" placeholder="+46 70 000 00 00">
             </div>
             <div class="form-group">
-              <label for="service">Tjänst</label>
+              <label for="service">TjÃ¤nst</label>
               <select id="service" name="service">
-                <option value="">Välj ett område...</option>
-                <option>Ledarskapsträning</option>
+                <option value="">VÃ¤lj ett omrÃ¥de...</option>
+                <option>LedarskapstrÃ¤ning</option>
                 <option>Ledarskapscoaching</option>
                 <option>Ledningsgruppsutveckling</option>
                 <option>Grupputveckling</option>
                 <option>Workshop</option>
-                <option>Föreläsning</option>
+                <option>FÃ¶relÃ¤sning</option>
                 <option>Annat / Vet ej</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Meddelande</label>
-              <textarea id="message" name="message" placeholder="Berätta kort om er organisation och vad ni önskar hjälp med..."></textarea>
+              <textarea id="message" name="message" placeholder="BerÃ¤tta kort om er organisation och vad ni Ã¶nskar hjÃ¤lp med..."></textarea>
             </div>
             <button type="submit" class="form-submit">Skicka meddelande</button>
           </form>
           <div id="form-success" style="display:none; background:var(--beige); border:1px solid var(--border); border-radius:8px; padding:24px; margin-top:16px; text-align:center;">
-            <p style="font-size:15px; color:var(--navy); font-weight:600; margin-bottom:6px;">Tack för ditt meddelande!</p>
-            <p style="font-size:13px; color:var(--gray);">Vi återkommer till dig så snart som möjligt.</p>
+            <p style="font-size:15px; color:var(--navy); font-weight:600; margin-bottom:6px;">Tack fÃ¶r ditt meddelande!</p>
+            <p style="font-size:13px; color:var(--gray);">Vi Ã¥terkommer till dig sÃ¥ snart som mÃ¶jligt.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ FOOTER ══ -->
+  <!-- ââ FOOTER ââ -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
@@ -1789,19 +1789,19 @@
             <span class="logo-wordmark">IGNICON<span style="color:var(--orange)">.</span></span>
             <span class="logo-tagline">Everything Starts With A Choice</span>
           </div>
-          <p>Med genuint engagemang, nyfikenhet och ett utmanande förhållningssätt hjälper vi ledare, grupper och organisationer att nå hela vägen fram till sin vision och ambition.</p>
+          <p>Med genuint engagemang, nyfikenhet och ett utmanande fÃ¶rhÃ¥llningssÃ¤tt hjÃ¤lper vi ledare, grupper och organisationer att nÃ¥ hela vÃ¤gen fram till sin vision och ambition.</p>
         </div>
 
         <div>
           <div class="footer-col-title">Meny</div>
           <ul class="footer-links">
             <li><a href="#hero">Hem</a></li>
-            <li><a href="#services">Ledarskapsträning</a></li>
+            <li><a href="#services">LedarskapstrÃ¤ning</a></li>
             <li><a href="#services">Ledarskapscoaching</a></li>
             <li><a href="#services">Ledningsgruppsutveckling</a></li>
             <li><a href="#services">Grupputveckling</a></li>
             <li><a href="#services">Workshops</a></li>
-            <li><a href="#services">Föreläsningar</a></li>
+            <li><a href="#services">FÃ¶relÃ¤sningar</a></li>
             <li><a href="#about">Om oss</a></li>
           </ul>
         </div>
@@ -1819,13 +1819,13 @@
       </div>
 
       <div class="footer-bottom">
-        <span class="footer-copy">Copyright Ignicon AB 2026. Alla rättigheter förbehållna.</span>
+        <span class="footer-copy">Copyright Ignicon AB 2026. Alla rÃ¤ttigheter fÃ¶rbehÃ¥llna.</span>
         <span class="footer-tagline-small">Everything Starts With A Choice</span>
       </div>
     </div>
   </footer>
 
-  <!-- ══ MODAL: LEDARSKAPSTRÄNING ══ -->
+  <!-- ââ MODAL: LEDARSKAPSTRÃNING ââ -->
   <div class="modal-overlay" id="modal-ledarskap">
     <div class="modal-backdrop" onclick="closeModal('modal-ledarskap')"></div>
     <div class="modal-panel">
@@ -1833,34 +1833,34 @@
         <button class="modal-close" onclick="closeModal('modal-ledarskap')">
           <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
-        <div class="modal-eyebrow">01 / Ledarskapsträning</div>
-        <h2 class="modal-title">Ledarskapsträning och utveckling</h2>
-        <p class="modal-tagline">Vi vill hjälpa dig som ledare att få en enklare vardag genom att finjustera och utveckla ditt ledarskap till nästa nivå.</p>
+        <div class="modal-eyebrow">01 / LedarskapstrÃ¤ning</div>
+        <h2 class="modal-title">LedarskapstrÃ¤ning och utveckling</h2>
+        <p class="modal-tagline">Vi vill hjÃ¤lpa dig som ledare att fÃ¥ en enklare vardag genom att finjustera och utveckla ditt ledarskap till nÃ¤sta nivÃ¥.</p>
       </div>
       <div class="modal-body">
         <h4>Vill du bli en uppskattad ledare?</h4>
-        <p>Våra kurser i ledarskapsutveckling ger dig de färdigheter och kunskaper du behöver för att lättare kunna leda en individ eller ett team mot organisationens vision och mål.</p>
-        <p>Med ett bra ledarskap i kombination med rätt resurser kan en organisation uppnå sin vision och sina mål på ett mycket effektivt sätt. Ledarskapsutveckling är därför ett viktigt verktyg för att lyckas i det ständigt föränderliga affärslandskapet.</p>
-        <h4>Exempel på utbildningar</h4>
+        <p>VÃ¥ra kurser i ledarskapsutveckling ger dig de fÃ¤rdigheter och kunskaper du behÃ¶ver fÃ¶r att lÃ¤ttare kunna leda en individ eller ett team mot organisationens vision och mÃ¥l.</p>
+        <p>Med ett bra ledarskap i kombination med rÃ¤tt resurser kan en organisation uppnÃ¥ sin vision och sina mÃ¥l pÃ¥ ett mycket effektivt sÃ¤tt. Ledarskapsutveckling Ã¤r dÃ¤rfÃ¶r ett viktigt verktyg fÃ¶r att lyckas i det stÃ¤ndigt fÃ¶rÃ¤nderliga affÃ¤rslandskapet.</p>
+        <h4>Exempel pÃ¥ utbildningar</h4>
         <ul class="modal-list">
-          <li>Hållbart ledarskap</li>
-          <li>Förändringsledarskap</li>
+          <li>HÃ¥llbart ledarskap</li>
+          <li>FÃ¶rÃ¤ndringsledarskap</li>
           <li>Distansledarskap</li>
-          <li>Leda och skapa självgående medarbetare</li>
-          <li>"Next Generation" – utveckla framtida ledare</li>
-          <li>Utvecklat EQ för effektivt ledarskap</li>
+          <li>Leda och skapa sjÃ¤lvgÃ¥ende medarbetare</li>
+          <li>"Next Generation" â utveckla framtida ledare</li>
+          <li>Utvecklat EQ fÃ¶r effektivt ledarskap</li>
           <li>Ledarskap</li>
           <li>Utvecklande ledarskap</li>
         </ul>
         <div class="modal-cta">
-          <p>Varmt välkommen att kontakta oss för att få ytterligare information om våra ledarskapsprogram.</p>
+          <p>Varmt vÃ¤lkommen att kontakta oss fÃ¶r att fÃ¥ ytterligare information om vÃ¥ra ledarskapsprogram.</p>
           <a href="#contact" class="modal-cta-btn" onclick="closeAllModals()">Kontakta oss</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ MODAL: LEDARSKAPSCOACHING ══ -->
+  <!-- ââ MODAL: LEDARSKAPSCOACHING ââ -->
   <div class="modal-overlay" id="modal-coaching">
     <div class="modal-backdrop" onclick="closeModal('modal-coaching')"></div>
     <div class="modal-panel">
@@ -1870,22 +1870,22 @@
         </button>
         <div class="modal-eyebrow">02 / Coaching</div>
         <h2 class="modal-title">Ledarskapscoaching</h2>
-        <p class="modal-tagline">Vi coachar dig individuellt utifrån din specifika situation och vägleder dig i hur du kan styra dig och ditt team i rätt riktning.</p>
+        <p class="modal-tagline">Vi coachar dig individuellt utifrÃ¥n din specifika situation och vÃ¤gleder dig i hur du kan styra dig och ditt team i rÃ¤tt riktning.</p>
       </div>
       <div class="modal-body">
-        <h4>Vill du bli en bättre ledare?</h4>
-        <p>Ledarskapscoachning är det perfekta sättet att förbättra dina färdigheter och förmågor som chef eller ledare. Vi som coacher hjälper dig att sätta upp mål, övervinna utmaningar, utveckla bättre precision i ledarskapet och utveckla nya strategier för att hantera svåra situationer.</p>
-        <p>Med individuell uppmärksamhet och vägledning kan coachning hjälpa ledare att frigöra sin fulla potential och skapa positiva förändringar i sitt team eller sin organisation.</p>
-        <p>Coaching är ett viktigt verktyg för alla som vill förbättra sina ledarskapsförmågor och nå sin vision.</p>
+        <h4>Vill du bli en bÃ¤ttre ledare?</h4>
+        <p>Ledarskapscoachning Ã¤r det perfekta sÃ¤ttet att fÃ¶rbÃ¤ttra dina fÃ¤rdigheter och fÃ¶rmÃ¥gor som chef eller ledare. Vi som coacher hjÃ¤lper dig att sÃ¤tta upp mÃ¥l, Ã¶vervinna utmaningar, utveckla bÃ¤ttre precision i ledarskapet och utveckla nya strategier fÃ¶r att hantera svÃ¥ra situationer.</p>
+        <p>Med individuell uppmÃ¤rksamhet och vÃ¤gledning kan coachning hjÃ¤lpa ledare att frigÃ¶ra sin fulla potential och skapa positiva fÃ¶rÃ¤ndringar i sitt team eller sin organisation.</p>
+        <p>Coaching Ã¤r ett viktigt verktyg fÃ¶r alla som vill fÃ¶rbÃ¤ttra sina ledarskapsfÃ¶rmÃ¥gor och nÃ¥ sin vision.</p>
         <div class="modal-cta">
-          <p>Kontakta oss i dag för att få veta mer om våra tjänster för ledarskapscoachning.</p>
+          <p>Kontakta oss i dag fÃ¶r att fÃ¥ veta mer om vÃ¥ra tjÃ¤nster fÃ¶r ledarskapscoachning.</p>
           <a href="#contact" class="modal-cta-btn" onclick="closeAllModals()">Kontakta oss</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ MODAL: LEDNINGSGRUPPSUTVECKLING ══ -->
+  <!-- ââ MODAL: LEDNINGSGRUPPSUTVECKLING ââ -->
   <div class="modal-overlay" id="modal-ledningsgrupp">
     <div class="modal-backdrop" onclick="closeModal('modal-ledningsgrupp')"></div>
     <div class="modal-panel">
@@ -1895,29 +1895,29 @@
         </button>
         <div class="modal-eyebrow">03 / Ledningsgrupp</div>
         <h2 class="modal-title">Ledningsgruppsutveckling</h2>
-        <p class="modal-tagline">Organisationer verkar i en verklighet som rör sig snabbt. Kraven ökar, komplexiteten tilltar och besluten blir mer avgörande.</p>
+        <p class="modal-tagline">Organisationer verkar i en verklighet som rÃ¶r sig snabbt. Kraven Ã¶kar, komplexiteten tilltar och besluten blir mer avgÃ¶rande.</p>
       </div>
       <div class="modal-body">
-        <p>En välfungerande ledningsgrupp skapar riktning, tempo och genomförandekraft. En otydlig eller splittrad grupp skapar motsatsen, även när kompetensen är hög.</p>
-        <p>Ledningsgruppsutveckling handlar därför inte om traditionell teambuilding. Det handlar om att stärka gruppens förmåga att fatta tydliga beslut, ta gemensamt ansvar och omsätta strategi till konkret handling.</p>
-        <h4>Vi arbetar med skräddarsydda insatser där vi</h4>
+        <p>En vÃ¤lfungerande ledningsgrupp skapar riktning, tempo och genomfÃ¶randekraft. En otydlig eller splittrad grupp skapar motsatsen, Ã¤ven nÃ¤r kompetensen Ã¤r hÃ¶g.</p>
+        <p>Ledningsgruppsutveckling handlar dÃ¤rfÃ¶r inte om traditionell teambuilding. Det handlar om att stÃ¤rka gruppens fÃ¶rmÃ¥ga att fatta tydliga beslut, ta gemensamt ansvar och omsÃ¤tta strategi till konkret handling.</p>
+        <h4>Vi arbetar med skrÃ¤ddarsydda insatser dÃ¤r vi</h4>
         <ul class="modal-list">
-          <li>Tydliggör uppdrag, mandat och förväntningar</li>
-          <li>Synliggör och hanterar de vanligaste fallgroparna i ledningsgrupper</li>
+          <li>TydliggÃ¶r uppdrag, mandat och fÃ¶rvÃ¤ntningar</li>
+          <li>SynliggÃ¶r och hanterar de vanligaste fallgroparna i ledningsgrupper</li>
           <li>Utvecklar tillit, ansvarstagande och konstruktiv friktion</li>
           <li>Tar tillvara gruppens olikheter som en strategisk styrka</li>
         </ul>
-        <p>Genom strukturerade metoder och beprövade modeller hjälper vi er att adressera och åtgärda de mest återkommande dysfunktionerna i ledningsgrupper – så att energi läggs på rätt frågor, i rätt forum, vid rätt tillfälle.</p>
-        <p>Resultatet är en mer samspelt ledningsgrupp med ökad tydlighet, högre exekveringskraft och bättre affärsmässiga resultat.</p>
+        <p>Genom strukturerade metoder och beprÃ¶vade modeller hjÃ¤lper vi er att adressera och Ã¥tgÃ¤rda de mest Ã¥terkommande dysfunktionerna i ledningsgrupper â sÃ¥ att energi lÃ¤ggs pÃ¥ rÃ¤tt frÃ¥gor, i rÃ¤tt forum, vid rÃ¤tt tillfÃ¤lle.</p>
+        <p>Resultatet Ã¤r en mer samspelt ledningsgrupp med Ã¶kad tydlighet, hÃ¶gre exekveringskraft och bÃ¤ttre affÃ¤rsmÃ¤ssiga resultat.</p>
         <div class="modal-cta">
-          <p>Hör av er så berättar vi mer om hur vi kan hjälpa er ledningsgrupp.</p>
+          <p>HÃ¶r av er sÃ¥ berÃ¤ttar vi mer om hur vi kan hjÃ¤lpa er ledningsgrupp.</p>
           <a href="#contact" class="modal-cta-btn" onclick="closeAllModals()">Kontakta oss</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ MODAL: GRUPPUTVECKLING ══ -->
+  <!-- ââ MODAL: GRUPPUTVECKLING ââ -->
   <div class="modal-overlay" id="modal-grupputveckling">
     <div class="modal-backdrop" onclick="closeModal('modal-grupputveckling')"></div>
     <div class="modal-panel">
@@ -1927,21 +1927,21 @@
         </button>
         <div class="modal-eyebrow">04 / Team &amp; Grupp</div>
         <h2 class="modal-title">Grupputveckling</h2>
-        <p class="modal-tagline">I takt med ökade utmaningar för organisationer har behovet av välfungerande team och grupper aldrig varit större.</p>
+        <p class="modal-tagline">I takt med Ã¶kade utmaningar fÃ¶r organisationer har behovet av vÃ¤lfungerande team och grupper aldrig varit stÃ¶rre.</p>
       </div>
       <div class="modal-body">
-        <p>Som ledare är det viktigare än någonsin att ha ett väl fungerande team. Grupputveckling kan hjälpa dig att skapa det perfekta teamet för din organisation.</p>
-        <p>Vi erbjuder skräddarsydda teambuildingprogram som hjälper dig och dina anställda att arbeta mer effektivt tillsammans. Vi hjälper er även med att få gruppens alla olikheter att komplettera varandra för att tillsammans bli en unik enhet där varje individ får och kan vara sitt bästa jag.</p>
-        <p>Våra program är utformade för att hjälpa team och grupper att bl.a. åtgärda och övervinna de 5 vanligaste dysfunktionerna i en grupp och att därmed förenkla för gruppen att nå sina strategiska och affärsmässiga mål. Med vår hjälp kommer ditt team att kunna nå sin fulla potential och prestera på bästa sätt.</p>
+        <p>Som ledare Ã¤r det viktigare Ã¤n nÃ¥gonsin att ha ett vÃ¤l fungerande team. Grupputveckling kan hjÃ¤lpa dig att skapa det perfekta teamet fÃ¶r din organisation.</p>
+        <p>Vi erbjuder skrÃ¤ddarsydda teambuildingprogram som hjÃ¤lper dig och dina anstÃ¤llda att arbeta mer effektivt tillsammans. Vi hjÃ¤lper er Ã¤ven med att fÃ¥ gruppens alla olikheter att komplettera varandra fÃ¶r att tillsammans bli en unik enhet dÃ¤r varje individ fÃ¥r och kan vara sitt bÃ¤sta jag.</p>
+        <p>VÃ¥ra program Ã¤r utformade fÃ¶r att hjÃ¤lpa team och grupper att bl.a. Ã¥tgÃ¤rda och Ã¶vervinna de 5 vanligaste dysfunktionerna i en grupp och att dÃ¤rmed fÃ¶renkla fÃ¶r gruppen att nÃ¥ sina strategiska och affÃ¤rsmÃ¤ssiga mÃ¥l. Med vÃ¥r hjÃ¤lp kommer ditt team att kunna nÃ¥ sin fulla potential och prestera pÃ¥ bÃ¤sta sÃ¤tt.</p>
         <div class="modal-cta">
-          <p>Kontakta oss idag för att ta reda på hur vi kan hjälpa er att bygga ett bättre team eller grupp.</p>
+          <p>Kontakta oss idag fÃ¶r att ta reda pÃ¥ hur vi kan hjÃ¤lpa er att bygga ett bÃ¤ttre team eller grupp.</p>
           <a href="#contact" class="modal-cta-btn" onclick="closeAllModals()">Kontakta oss</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ MODAL: WORKSHOPS ══ -->
+  <!-- ââ MODAL: WORKSHOPS ââ -->
   <div class="modal-overlay" id="modal-workshops">
     <div class="modal-backdrop" onclick="closeModal('modal-workshops')"></div>
     <div class="modal-panel">
@@ -1951,24 +1951,24 @@
         </button>
         <div class="modal-eyebrow">05 / Workshops</div>
         <h2 class="modal-title">Workshops</h2>
-        <p class="modal-tagline">Vi guidar stora grupper till att nå ett specifikt mål, i en specifik riktning, inom en verksamhet.</p>
+        <p class="modal-tagline">Vi guidar stora grupper till att nÃ¥ ett specifikt mÃ¥l, i en specifik riktning, inom en verksamhet.</p>
       </div>
       <div class="modal-body">
-        <p>Känner du att din grupp eller organisation sitter fast och inte vet hur de ska gå vidare i en eller flera specifika frågeställningar?</p>
+        <p>KÃ¤nner du att din grupp eller organisation sitter fast och inte vet hur de ska gÃ¥ vidare i en eller flera specifika frÃ¥gestÃ¤llningar?</p>
         <div class="modal-question-box">
-          <p>Vilken kultur skall vi ha? · Hur skall våra affärskritiska mål tas fram? · Vem skall ansvara för vad?</p>
+          <p>Vilken kultur skall vi ha? Â· Hur skall vÃ¥ra affÃ¤rskritiska mÃ¥l tas fram? Â· Vem skall ansvara fÃ¶r vad?</p>
         </div>
-        <p>Vi är specialister på att hjälpa grupper att definiera kritiska frågor, komma på kreativa lösningar för att lösa problem, bygga upp en relation mellan olika avdelningar och komma överens om rätt åtgärder för att gå vidare.</p>
-        <p>Med andra ord kan vi hjälpa ditt team att komma loss och börja röra er framåt igen. Du behöver inte ägna timmar åt att plågas av vad du ska göra härnäst eller hur du ska ta dig dit. Med vår hjälp kan ni snabbt och enkelt gå vidare med en tydlig handlingsplan som alla är överens om.</p>
+        <p>Vi Ã¤r specialister pÃ¥ att hjÃ¤lpa grupper att definiera kritiska frÃ¥gor, komma pÃ¥ kreativa lÃ¶sningar fÃ¶r att lÃ¶sa problem, bygga upp en relation mellan olika avdelningar och komma Ã¶verens om rÃ¤tt Ã¥tgÃ¤rder fÃ¶r att gÃ¥ vidare.</p>
+        <p>Med andra ord kan vi hjÃ¤lpa ditt team att komma loss och bÃ¶rja rÃ¶ra er framÃ¥t igen. Du behÃ¶ver inte Ã¤gna timmar Ã¥t att plÃ¥gas av vad du ska gÃ¶ra hÃ¤rnÃ¤st eller hur du ska ta dig dit. Med vÃ¥r hjÃ¤lp kan ni snabbt och enkelt gÃ¥ vidare med en tydlig handlingsplan som alla Ã¤r Ã¶verens om.</p>
         <div class="modal-cta">
-          <p>Kontakta oss idag för att få veta mer om våra workshops och hur vi kan hjälpa er komma dit ni vill.</p>
+          <p>Kontakta oss idag fÃ¶r att fÃ¥ veta mer om vÃ¥ra workshops och hur vi kan hjÃ¤lpa er komma dit ni vill.</p>
           <a href="#contact" class="modal-cta-btn" onclick="closeAllModals()">Kontakta oss</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ MODAL: FÖRELÄSNINGAR ══ -->
+  <!-- ââ MODAL: FÃRELÃSNINGAR ââ -->
   <div class="modal-overlay" id="modal-forelasningar">
     <div class="modal-backdrop" onclick="closeModal('modal-forelasningar')"></div>
     <div class="modal-panel">
@@ -1976,24 +1976,24 @@
         <button class="modal-close" onclick="closeModal('modal-forelasningar')">
           <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
-        <div class="modal-eyebrow">06 / Föreläsningar</div>
-        <h2 class="modal-title">Inspirationsföreläsningar</h2>
-        <p class="modal-tagline">Vi erbjuder föreläsningar där vi ger handfast inspiration för att klara av vardagens ledarskap och grupputmaningar.</p>
+        <div class="modal-eyebrow">06 / FÃ¶relÃ¤sningar</div>
+        <h2 class="modal-title">InspirationsfÃ¶relÃ¤sningar</h2>
+        <p class="modal-tagline">Vi erbjuder fÃ¶relÃ¤sningar dÃ¤r vi ger handfast inspiration fÃ¶r att klara av vardagens ledarskap och grupputmaningar.</p>
       </div>
       <div class="modal-body">
-        <p>Nya tider ställer nya krav på ledarskapet. En skicklig ledare kan anpassa sitt ledarskap efter den rådande situationen. Det innebär inte bara att ta hänsyn till medarbetarnas förutsättningar, drivkrafter och kompetenser utan även att reflektera och analysera de yttre kraven som råder för företaget och på arbetsplatsen.</p>
-        <p>I ditt chefs- och ledarskapuppdrag ingår dessutom att hantera relationer, förhålla dig till företagets förutsättningar och ramar samt att leverera ett förväntat resultat och på så vis leda verksamheten i en konstruktiv riktning.</p>
-        <p>Våra inspirationsföreläsningar guidar dig i hur du kan utveckla ditt ledarskap och forma det efter vår moderna tids förutsättningar. Föreläsningarna kan handla om i stort sett vad som helst som är kopplat till att utveckla en grupp, så som: engagemang, motivation, ledarskapsfrågan, teamutveckling och så vidare.</p>
+        <p>Nya tider stÃ¤ller nya krav pÃ¥ ledarskapet. En skicklig ledare kan anpassa sitt ledarskap efter den rÃ¥dande situationen. Det innebÃ¤r inte bara att ta hÃ¤nsyn till medarbetarnas fÃ¶rutsÃ¤ttningar, drivkrafter och kompetenser utan Ã¤ven att reflektera och analysera de yttre kraven som rÃ¥der fÃ¶r fÃ¶retaget och pÃ¥ arbetsplatsen.</p>
+        <p>I ditt chefs- och ledarskapuppdrag ingÃ¥r dessutom att hantera relationer, fÃ¶rhÃ¥lla dig till fÃ¶retagets fÃ¶rutsÃ¤ttningar och ramar samt att leverera ett fÃ¶rvÃ¤ntat resultat och pÃ¥ sÃ¥ vis leda verksamheten i en konstruktiv riktning.</p>
+        <p>VÃ¥ra inspirationsfÃ¶relÃ¤sningar guidar dig i hur du kan utveckla ditt ledarskap och forma det efter vÃ¥r moderna tids fÃ¶rutsÃ¤ttningar. FÃ¶relÃ¤sningarna kan handla om i stort sett vad som helst som Ã¤r kopplat till att utveckla en grupp, sÃ¥ som: engagemang, motivation, ledarskapsfrÃ¥gan, teamutveckling och sÃ¥ vidare.</p>
         <h4>Format</h4>
         <ul class="modal-list">
-          <li>Föreläsningarna pågår vanligtvis 1–3 timmar</li>
-          <li>Fungerar som inspiration för deltagarna</li>
-          <li>Utgår alltid från ett specifikt tema</li>
-          <li>Exempel: "Tillbaka till kontoret – vi vill bli mer engagerade"</li>
-          <li>Exempel: "Framtid – nutid – dåtid – hur kommer vi tillbaka?"</li>
+          <li>FÃ¶relÃ¤sningarna pÃ¥gÃ¥r vanligtvis 1â3 timmar</li>
+          <li>Fungerar som inspiration fÃ¶r deltagarna</li>
+          <li>UtgÃ¥r alltid frÃ¥n ett specifikt tema</li>
+          <li>Exempel: "Tillbaka till kontoret â vi vill bli mer engagerade"</li>
+          <li>Exempel: "Framtid â nutid â dÃ¥tid â hur kommer vi tillbaka?"</li>
         </ul>
         <div class="modal-cta">
-          <p>Varmt välkommen att kontakta oss för ytterligare information om våra inspirationsföreläsningar.</p>
+          <p>Varmt vÃ¤lkommen att kontakta oss fÃ¶r ytterligare information om vÃ¥ra inspirationsfÃ¶relÃ¤sningar.</p>
           <a href="#contact" class="modal-cta-btn" onclick="closeAllModals()">Kontakta oss</a>
         </div>
       </div>
@@ -2001,13 +2001,13 @@
   </div>
 
   <script>
-    // ── Sticky nav shadow
+    // ââ Sticky nav shadow
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
     });
 
-    // ── Mobile menu (hover + click fallback för touch)
+    // ââ Mobile menu (hover + click fallback fÃ¶r touch)
     function toggleMenu() {
       const links  = document.getElementById('navLinks');
       const burger = document.getElementById('navBurger');
@@ -2015,7 +2015,7 @@
       burger.classList.toggle('open');
     }
 
-    // Stäng menyn vid klick/tap utanför
+    // StÃ¤ng menyn vid klick/tap utanfÃ¶r
     document.addEventListener('click', function(e) {
       const burger = document.getElementById('navBurger');
       const links  = document.getElementById('navLinks');
@@ -2044,7 +2044,7 @@
       links.addEventListener('mouseleave',  hideMenu);
     })();
 
-    // ── Scroll animations
+    // ââ Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
@@ -2058,7 +2058,7 @@
 
     document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
-    // ── Active nav link on scroll
+    // ââ Active nav link on scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -2077,11 +2077,11 @@
       });
     });
 
-    // ── Form handler (Formspree)
+    // ââ Form handler (Formspree)
     async function handleSubmit(e) {
       e.preventDefault();
       const form = e.target;
-      // Kopiera avsändarens e-post till _replyto så du kan svara direkt
+      // Kopiera avsÃ¤ndarens e-post till _replyto sÃ¥ du kan svara direkt
       const emailVal = form.querySelector('#email').value;
       document.getElementById('replyto-field').value = emailVal;
       const btn = form.querySelector('.form-submit');
@@ -2097,23 +2097,23 @@
           form.style.display = 'none';
           document.getElementById('form-success').style.display = 'block';
         } else {
-          btn.textContent = 'Något gick fel – försök igen';
+          btn.textContent = 'NÃ¥got gick fel â fÃ¶rsÃ¶k igen';
           btn.disabled = false;
         }
       } catch {
-        btn.textContent = 'Något gick fel – försök igen';
+        btn.textContent = 'NÃ¥got gick fel â fÃ¶rsÃ¶k igen';
         btn.disabled = false;
       }
     }
 
-    // ── Smooth close dropdown on link click
+    // ââ Smooth close dropdown on link click
     document.querySelectorAll('.dropdown a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('open');
       });
     });
 
-    // ── Modal system
+    // ââ Modal system
     function openModal(id) {
       closeAllModals();
       const overlay = document.getElementById(id);
