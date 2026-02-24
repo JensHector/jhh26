@@ -219,7 +219,48 @@ function parseFrontmatter(text) { const match = text.match(/^---\n([\s\S]*?)\n--
 function fileToSlug(filename) { return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, ''); }
 async function loadPosts() { try { const res = await fetch('/_posts/index.json').catch(() => null); if (res && res.ok) { const files = await res.json(); return await Promise.all(files.map(f => loadPost(f))); } const indexRes = await fetch('/_posts/posts.json').catch(() => null); if (indexRes && indexRes.ok) { const files = await indexRes.json(); return await Promise.all(files.map(f => loadPost(f))); } return []; } catch(e) { return []; } }
 async function loadPost(filename) { const res = await fetch(`/_posts/${filename}`); const text = await res.text(); const { data, content } = parseFrontmatter(text); return { ...data, filename, slug: fileToSlug(filename), content }; }
-function renderPosts(posts) { const container = document.getElementById('blog-container'); if (!posts.length) { container.innerHTML = `<div class="empty-state"><h3>Inga inlägg ännu</h3><p>Gå till <strong>/admin</strong> för att skriva ditt första inlägg.</p></div>`; return; } posts.sort((a, b) => new Date(b.date) - new Date(a.date)); const featured = posts.find(p => p.featured === 'true') || posts[0]; const rest = posts.filter(p => p !== featured); const emoji = categoryEmoji[featured.category] || categoryEmoji.default; let html = `<article class="featured-post" data-category="${featured.category || ''}"><div class="post-image-placeholder">${emoji}</div><div><span class="featured-badge">★ Senaste inlägg</span><span class="post-category">${featured.category || 'Ledarskap'}</span><h2><a href="inlagg.html?post=${featured.filename}">${featured.title}</a></h2><div class="post-meta"><span class="author">Jens Hector</span><span>·</span><span>${formatDate(featured.date)}</span><span>·</span><span>${featured.readtime || '5 min läsning'}</span></div><p class="post-excerpt">${featured.excerpt || ''}</p><a href="inlagg.html?post=${featured.filename}" class="read-more">Läs inlägget</a></div></article>`; if (rest.length) { html += `<div class="posts-grid" id="posts-grid">`; rest.forEach(post => { const e = categoryEmoji[post.category] || categoryEmoji.default; html += `<article class="post-card" data-category="${post.category || ''}"><div class="card-image">${e}</div><div class="card-body"><span class="post-category">${post.category || ''}</span><h3><a href="inlagg.html?post=${post.filename}">${post.title}</a></h3><p class="post-excerpt">${post.excerpt || ''}</p><div class="post-meta"><span class="author">Jens Hector</span><span>·</span><span>${formatDate(post.date)}</span></div></div></article>`; }); html += `</div>`; } container.innerHTML = html; }
+function renderPosts(posts) {
+  const container = document.getElementById('blog-container');
+  const activeFilter = document.querySelector('.filter-tag.active')?.dataset.filter || 'Alla';
+  const filtered = activeFilter === 'Alla' ? posts : posts.filter(p => p.category === activeFilter);
+  if (!filtered.length) {
+    container.innerHTML = '<div class="empty-state"><h3>Inga inlägg ännu</h3><p>Kom snart tillbaka!</p></div>';
+    return;
+  }
+  filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const featured = filtered.find(p => p.featured === 'true') || filtered[0];
+  const rest = filtered.filter(p => p !== featured);
+  const emojiMap = {'Ledarskap':'🎧','Grupputveckling':'👥','Ledningsgrupp':'🏢','Coaching':'💡','Organisation':'🔥'};
+  const emoji = emojiMap[featured.category] || '📖';
+  let out = `<div class="post-featured">
+    <div class="post-featured-image">${emoji}</div>
+    <div class="post-featured-content">
+      <p class="post-cat">★ Senaste inlägg · ${featured.category || ''}</p>
+      <h2><a href="/inlagg.html?post=${featured.filename}" style="color:inherit;text-decoration:none;">${featured.title}</a></h2>
+      <p>${featured.excerpt || ''}</p>
+      <p class="post-featured-meta">${featured.author || 'Ignicon'} · ${formatDate(featured.date)} · ${featured.readtime || '5 min läsning'}</p>
+      <a href="/inlagg.html?post=${featured.filename}" class="post-read-link">Läs inlägget →</a>
+    </div>
+  </div>`;
+  if (rest.length) {
+    out += '<div class="posts-grid">';
+    rest.forEach(p => {
+      const em = emojiMap[p.category] || '📖';
+      out += `<div class="post-card">
+        <div class="post-card-image">${em}</div>
+        <div class="post-card-content">
+          <p class="post-cat">${p.category || ''}</p>
+          <h3><a href="/inlagg.html?post=${p.filename}" style="color:inherit;text-decoration:none;">${p.title}</a></h3>
+          <p>${p.excerpt || ''}</p>
+          <p class="post-card-meta">${p.author || 'Ignicon'} · ${formatDate(p.date)}</p>
+          <a href="/inlagg.html?post=${p.filename}" class="post-read-link">Läs inlägget →</a>
+        </div>
+      </div>`;
+    });
+    out += '</div>';
+  }
+  container.innerHTML = out;
+}
 document.querySelectorAll('.filter-tag').forEach(tag => { tag.addEventListener('click', e => { e.preventDefault(); document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active')); tag.classList.add('active'); const filter = tag.dataset.filter; document.querySelectorAll('[data-category]').forEach(el => { el.style.display = (filter === 'alla' || el.dataset.category === filter) ? '' : 'none'; }); }); });
 if (window.netlifyIdentity) { window.netlifyIdentity.on("init", user => { if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); } }); }
 loadPosts().then(renderPosts);
