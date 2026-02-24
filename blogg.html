@@ -138,7 +138,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-const categoryEmoji = { 'Ledarskap': '🎧', 'Grupputveckling': '👥', 'Ledningsgrupp': '🏢'k 'Coaching': '💡', 'Organisation': '🔥', 'default': '📖' };
+const categoryEmoji = { 'Ledarskap': '🎧', 'Grupputveckling': '👥', 'Ledningsgrupp': '🏢', 'Coaching': '💡', 'Organisation': '🔥', 'default': '📖' };
 function formatDate(dateStr) { const months = ['jan','feb','mar','apr','maj','jun','jul','aug','sep','okt','nov','dec']; const d = new Date(dateStr); return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`; }
 function parseFrontmatter(text) { const match = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/); if (!match) return { data: {}, content: text }; const data = {}; match[1].split('\n').forEach(line => { const [key, ...val] = line.split(':'); if (key && val.length) data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, ''); }); return { data, content: match[2] }; }
 function fileToSlug(filename) { return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, ''); }
