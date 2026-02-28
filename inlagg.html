@@ -222,7 +222,7 @@ async function loadPost() {
     if (!filename) { renderError('Inget inl\u00e4gg angivet.'); return; }
 
     try {
-        const res = await fetch('/_posts/' + filename);
+        const res = await fetch('_posts/' + filename);
         if (!res.ok) throw new Error('404');
         const text = await res.text();
         const { data, content } = parseFrontmatter(text);
