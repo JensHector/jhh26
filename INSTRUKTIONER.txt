@@ -1,0 +1,96 @@
+# IGNICON BLOGG — INSTRUKTIONER
+## Kom igång på 5 minuter
+
+---
+
+## STEG 1: Ladda upp filerna till GitHub
+
+Ladda upp dessa två filer till ditt repo (jenshector/ignicon-hemsida):
+- blogg.html
+- blogg-mall.html
+
+---
+
+## STEG 2: Lägg till blogglänk i index.html
+
+Hitta raden i navigeringen som ser ut ungefär så här:
+    <li><a href="#about">Om oss</a></li>
+
+Lägg till INNAN den raden:
+    <li><a href="blogg.html">Blogg</a></li>
+
+---
+
+## STEG 3: Skriva ett nytt inlägg (tar 10 min)
+
+1. Kopiera filen blogg-mall.html
+2. Döp den till: inlagg-ditt-amne.html  
+   (t.ex. inlagg-ledningsgrupp.html)
+
+3. Öppna filen i en textredigerare (Notepad, TextEdit etc.)
+
+4. Ändra dessa rader högst upp:
+   - <title>DIN RUBRIK | Ignicon AB</title>
+   - <meta name="description" content="DIN BESKRIVNING" />
+
+5. Ändra i article-header:
+   - Kategori (Ledarskap / Grupputveckling / Coaching etc.)
+   - <h1>DIN RUBRIK</h1>
+   - Datum
+   - Lästid (räkna ca 200 ord per minut)
+
+6. Klistra in LinkedIn-texten i article-body:
+   - Varje stycke: <p>Ditt stycke här</p>
+   - Rubriker: <h2>Din rubrik</h2>
+   - Citat/höjdpunkter: <blockquote>Ditt citat</blockquote>
+   - Punktlistor: <ul><li>Punkt 1</li><li>Punkt 2</li></ul>
+
+7. Ändra CTA-texten längst ner så den passar ämnet
+
+---
+
+## STEG 4: Lägg till inlägget i blogg.html
+
+Öppna blogg.html och lägg till ett nytt kort i posts-grid:
+
+    <article class="post-card">
+      <div class="card-image">🎯</div>  ← välj en emoji
+      <div class="card-body">
+        <span class="post-category">Ledarskap</span>  ← kategori
+        <h3><a href="inlagg-ditt-amne.html">DIN RUBRIK</a></h3>
+        <p class="post-excerpt">1-2 meningar om vad inlägget handlar om.</p>
+        <div class="post-meta">
+          <span class="author">Jens Hector</span>
+          <span>·</span>
+          <span>DATUM</span>
+        </div>
+      </div>
+    </article>
+
+---
+
+## TIPS: Från LinkedIn till blogg
+
+LinkedIn-format → Blogg-format:
+- Radbrytningar i LinkedIn  → Egna <p>-taggar
+- **Fetstil** i LinkedIn     → <strong>fetstil</strong>
+- Emojis i LinkedIn          → Fungerar direkt!
+- Punktlistor i LinkedIn     → <ul><li>...</li></ul>
+- Rubriker i LinkedIn        → <h2>...</h2>
+
+---
+
+## SEO-tips per inlägg
+
+Bra ämnen som folk googlar:
+- "Hur bygger man tillit i en ledningsgrupp?"
+- "Tecken på dålig gruppdynamik"
+- "Hur hanterar man konflikter i team?"
+- "Vad är psykologisk trygghet?"
+- "Distansledarskap tips"
+
+Dessa fraser i title + h2 = organisk trafik med tiden.
+
+---
+
+Frågor? Kontakta: jens.hector@ignicon.se
