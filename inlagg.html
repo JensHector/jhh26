@@ -65,20 +65,30 @@
 
     footer { background: var(--black); color: var(--white); padding: 2rem 4%; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.82rem; opacity: 0.6; }
     .loading { text-align: center; padding: 6rem; color: var(--grey); }
-    @media (max-width: 600px) { .nav-links { display: none; } }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    @media (max-width: 600px) {
+      .nav-burger { display: flex; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); border-bottom: 1px solid var(--border); padding: 1rem 4%; gap: 0.5rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { list-style: none; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-logo">IGNICON<span>.</span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Hem</a></li>
     <li><a href="index.html#services">Tjänster</a></li>
     <li><a href="blogg.html">Blogg</a></li>
     <li><a href="index.html#about">Om oss</a></li>
     <li><a href="index.html#contact" class="nav-cta">Kontakta oss</a></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Öppna meny">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="breadcrumb">
@@ -186,6 +196,11 @@ async function loadAndRender() {
 }
 
 loadAndRender();
+
+// Mobilmeny
+document.getElementById('navBurger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
 </script>
 </body>
 </html>

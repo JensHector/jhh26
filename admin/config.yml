@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blogginlägg"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        options: ["Ledarskap", "Grupputveckling", "Ledningsgrupp", "Coaching", "Organisation"]
+      - { label: "Utdrag", name: "excerpt", widget: "string" }
+      - { label: "Lästid", name: "readtime", widget: "string", default: "5 min läsning" }
+      - { label: "Utvalt inlägg", name: "featured", widget: "boolean", default: false }
+      - { label: "Innehåll", name: "body", widget: "markdown" }
