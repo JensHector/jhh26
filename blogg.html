@@ -267,10 +267,10 @@ function renderPosts(posts) {
   let out = `<div class="post-featured">
     <div class="post-featured-content">
       <p class="post-cat">★ Senaste inlägg · ${featured.category || ''}</p>
-      <h2><a href="/inlagg.html?post=${featured.filename}" style="color:inherit;text-decoration:none;">${featured.title}</a></h2>
+      <h2><a href="inlagg.html?post=${featured.filename}" style="color:inherit;text-decoration:none;">${featured.title}</a></h2>
       <p>${featured.excerpt || ''}</p>
       <p class="post-featured-meta">${featured.author || 'Ignicon'} · ${formatDate(featured.date)} · ${featured.readtime || '5 min läsning'}</p>
-      <a href="/inlagg.html?post=${featured.filename}" class="post-read-link">Läs inlägget →</a>
+      <a href="inlagg.html?post=${featured.filename}" class="post-read-link">Läs inlägget →</a>
     </div>
   </div>`;
   if (rest.length) {
@@ -280,10 +280,10 @@ function renderPosts(posts) {
       out += `<div class="post-card">
         <div class="post-card-content">
           <p class="post-cat">${p.category || ''}</p>
-          <h3><a href="/inlagg.html?post=${p.filename}" style="color:inherit;text-decoration:none;">${p.title}</a></h3>
+          <h3><a href="inlagg.html?post=${p.filename}" style="color:inherit;text-decoration:none;">${p.title}</a></h3>
           <p>${p.excerpt || ''}</p>
           <p class="post-card-meta">${p.author || 'Ignicon'} · ${formatDate(p.date)}</p>
-          <a href="/inlagg.html?post=${p.filename}" class="post-read-link">Läs inlägget →</a>
+          <a href="inlagg.html?post=${p.filename}" class="post-read-link">Läs inlägget →</a>
         </div>
       </div>`;
     });
