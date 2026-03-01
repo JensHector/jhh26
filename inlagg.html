@@ -1,206 +1,278 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogginlägg | Ignicon AB</title>
-  <meta name="description" content="" id="meta-desc" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --black: #0d0d0d; --white: #fafaf8; --accent: #c8a96e; --accent-dark: #a8893e; --grey: #6b6b6b; --light-grey: #f0efec; --border: #e2e0da; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); font-size: 17px; line-height: 1.8; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlägg | Ignicon AB</title>
+    <meta name="description" content="Artiklar om ledarskap, grupputveckling och organisationsutveckling från Ignicon AB.">
+    <link rel="canonical" href="https://ignicon.se/inlagg.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ignicon AB">
+    <meta property="og:locale" content="sv_SE">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #202032;
+            --orange: #E8571A;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--navy); }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4%; background: rgba(250,250,248,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--black); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 500; color: var(--black); opacity: 0.7; transition: opacity 0.2s; }
-    .nav-links a:hover { opacity: 1; }
-    .nav-cta { background: var(--black); color: var(--white) !important; opacity: 1 !important; padding: 0.5rem 1.2rem; border-radius: 4px; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--navy); height: 68px; display: flex; align-items: center; padding: 0 48px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; flex-direction: column; text-decoration: none; }
+        .logo-wordmark { font-size: 17px; font-weight: 700; letter-spacing: 0.18em; color: var(--white); text-transform: uppercase; }
+        .logo-wordmark span { color: var(--orange); }
+        .logo-tagline { font-size: 9px; letter-spacing: 0.1em; color: var(--orange); font-style: italic; font-weight: 300; }
+        .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+        .nav-links a { display: block; padding: 8px 14px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; border-radius: 4px; transition: color 0.2s, background 0.2s; }
+        .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+        .nav-cta { background: var(--orange) !important; color: var(--white) !important; border-radius: 6px !important; font-weight: 600 !important; padding: 8px 20px !important; }
+        .nav-cta:hover { background: #d44e16 !important; }
 
-    .breadcrumb { margin-top: 70px; padding: 1rem 4%; font-size: 0.8rem; color: var(--grey); border-bottom: 1px solid var(--border); }
-    .breadcrumb a { color: var(--grey); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--black); }
-    .breadcrumb span { margin: 0 0.5rem; }
+        .post-hero { background: var(--navy); padding: 120px 48px 60px; position: relative; overflow: hidden; }
+        .post-hero-inner { max-width: 800px; margin: 0 auto; }
+        .post-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+        .back-link { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+        .back-link:hover { color: var(--orange); }
+        .post-category { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: var(--orange); text-transform: uppercase; }
+        .post-hero h1 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 20px; }
+        .post-meta { font-size: 13px; color: rgba(255,255,255,0.4); }
+        .post-meta span { margin-right: 16px; }
+        .hero-bg-text { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-size: clamp(60px, 10vw, 130px); font-weight: 900; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; text-transform: uppercase; }
 
-    .article-header { max-width: 760px; margin: 0 auto; padding: 3.5rem 4% 2rem; }
-    .article-category { display: block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 1rem; }
-    .article-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
-    .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--grey); padding-bottom: 2rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-    .author-block { display: flex; align-items: center; gap: 0.6rem; }
-    .author-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--light-grey); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; }
-    .author-name { font-weight: 600; color: var(--black); font-size: 0.88rem; }
+        .post-body { max-width: 800px; margin: 0 auto; padding: 60px 48px 80px; }
+        .post-body h2 { font-size: 24px; font-weight: 700; margin: 40px 0 16px; }
+        .post-body h3 { font-size: 19px; font-weight: 700; margin: 32px 0 12px; }
+        .post-body p { font-size: 17px; line-height: 1.8; color: #333; margin-bottom: 20px; }
+        .post-body strong { color: var(--navy); font-weight: 700; }
+        .post-body ol, .post-body ul { padding-left: 24px; margin-bottom: 20px; }
+        .post-body li { font-size: 17px; line-height: 1.8; color: #333; margin-bottom: 8px; }
+        .post-body a { color: var(--orange); text-decoration: none; border-bottom: 1px solid rgba(232,87,26,0.3); }
+        .post-body blockquote { border-left: 3px solid var(--orange); margin: 32px 0; padding: 16px 24px; background: var(--light-gray); border-radius: 0 8px 8px 0; }
+        .post-body blockquote p { color: var(--navy); font-style: italic; margin: 0; }
 
-    .article-body { max-width: 680px; margin: 0 auto; padding: 2.5rem 4% 4rem; }
-    .article-body p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #1a1a1a; }
-    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin: 2.5rem 0 1rem; line-height: 1.25; }
-    .article-body h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.7rem; }
-    .article-body ul, .article-body ol { margin: 1rem 0 1.4rem 1.5rem; }
-    .article-body li { margin-bottom: 0.5rem; font-size: 1.05rem; }
-    .article-body blockquote { border-left: 3px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; background: var(--light-grey); border-radius: 0 4px 4px 0; font-style: italic; font-size: 1.1rem; color: #2a2a2a; }
-    .article-body strong { font-weight: 600; }
-    .article-body a { color: var(--accent-dark); }
+        .post-cta { background: var(--navy); border-radius: 12px; padding: 48px; text-align: center; max-width: 800px; margin: 0 auto 80px; }
+        .post-cta h3 { font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+        .post-cta p { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 28px; }
+        .cta-btn { display: inline-block; background: var(--orange); color: var(--white); padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; transition: background 0.2s; }
+        .cta-btn:hover { background: #d44e16; }
 
-    .author-bio { max-width: 680px; margin: 0 auto 4rem; padding: 0 4%; }
-    .author-bio-inner { background: var(--light-grey); border-radius: 4px; padding: 1.5rem; display: flex; gap: 1.2rem; align-items: flex-start; }
-    .author-bio-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; }
-    .author-bio h4 { font-weight: 600; margin-bottom: 0.2rem; }
-    .author-bio p { font-size: 0.88rem; color: var(--grey); margin-bottom: 0; }
+        .back-section { text-align: center; padding: 0 48px 60px; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font-size: 14px; font-weight: 600; text-decoration: none; border: 2px solid rgba(0,0,0,0.15); padding: 10px 24px; border-radius: 100px; transition: all 0.2s; }
+        .back-btn:hover { border-color: var(--orange); color: var(--orange); }
 
-    .back-to-blog { display: flex; justify-content: center; padding: 0 4% 3rem; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); padding-bottom: 1px; transition: all 0.2s; }
-    .back-link:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
-    .back-link::before { content: '←'; margin-right: 4px; }
+        footer { background: var(--navy); padding: 32px 48px; text-align: center; }
+        footer p { color: rgba(255,255,255,0.4); font-size: 13px; }
+        .loading { padding: 140px 48px; text-align: center; color: #999; font-size: 16px; }
 
-    .article-cta { background: var(--black); color: var(--white); padding: 4rem 4%; text-align: center; }
-    .article-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 0.8rem; }
-    .article-cta p { opacity: 0.65; margin-bottom: 2rem; font-size: 0.95rem; }
-    .cta-btn { display: inline-block; padding: 0.9rem 2rem; background: var(--accent); color: var(--black); text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
-    .cta-btn:hover { background: var(--accent-dark); color: var(--white); }
-
-    footer { background: var(--black); color: var(--white); padding: 2rem 4%; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.82rem; opacity: 0.6; }
-    .loading { text-align: center; padding: 6rem; color: var(--grey); }
-    .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
-    @media (max-width: 600px) {
-      .nav-burger { display: flex; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); border-bottom: 1px solid var(--border); padding: 1rem 4%; gap: 0.5rem; }
-      .nav-links.open { display: flex; }
-      .nav-links li { list-style: none; }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .post-hero { padding: 100px 20px 48px; }
+            .post-body { padding: 40px 20px 60px; }
+            .post-cta { margin: 0 20px 60px; padding: 32px 24px; }
+            .back-section { padding: 0 20px 48px; }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo">IGNICON<span>.</span></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Hem</a></li>
-    <li><a href="index.html#services">Tjänster</a></li>
-    <li><a href="blogg.html">Blogg</a></li>
-    <li><a href="index.html#about">Om oss</a></li>
-    <li><a href="index.html#contact" class="nav-cta">Kontakta oss</a></li>
-  </ul>
-  <button class="nav-burger" id="navBurger" aria-label="Öppna meny">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/index.html" class="nav-logo">
+            <span class="logo-wordmark">IGNICON<span>.</span></span>
+            <span class="logo-tagline">Everything Starts With A Choice</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/index.html#hero">Hem</a></li>
+            <li><a href="/index.html#services">Tjänster</a></li>
+            <li><a href="/blogg.html">Artiklar &amp; Tankar</a></li>
+            <li><a href="/index.html#about">Om oss</a></li>
+            <li><a href="/index.html#contact" class="nav-cta">Kontakt</a></li>
+        </ul>
+    </div>
 </nav>
 
-<div class="breadcrumb">
-  <a href="index.html">Hem</a>
-  <span>›</span>
-  <a href="blogg.html">Blogg</a>
-  <span>›</span>
-  <span id="breadcrumb-title">Läser inlägg…</span>
-</div>
+<div id="post-root"><div class="loading">Laddar inlägg…</div></div>
 
-<div id="article-container">
-  <div class="loading">Laddar inlägg…</div>
-</div>
+<footer><p>Copyright Ignicon AB 2026. Alla rättigheter förbehållna.</p></footer>
 
-<div class="back-to-blog">
-  <a href="blogg.html" class="back-link">Tillbaka till bloggen</a>
-</div>
-
-<section class="article-cta">
-  <h2>Vill du veta mer?</h2>
-  <p>Vi hjälper ledare, grupper och ledningsgrupper att nå sin fulla potential. Hör av dig.</p>
-  <a href="index.html#contact" class="cta-btn">Ta en första kontakt →</a>
-</section>
-
-<footer>
-  <p>Copyright Ignicon AB 2026. Alla rättigheter förbehållna.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
 <script>
 function parseFrontmatter(text) {
-  const match = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  if (!match) return { data: {}, content: text };
-  const data = {};
-  match[1].split('\n').forEach(line => {
-    const [key, ...val] = line.split(':');
-    if (key && val.length) data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, '');
-  });
-  return { data, content: match[2] };
+    const match = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+    if (!match) return { data: {}, content: text };
+    const data = {};
+    match[1].split('\n').forEach(line => {
+        const [key, ...val] = line.split(':');
+        if (key && val.length) data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, '');
+    });
+    return { data, content: match[2] };
 }
 
-function formatDate(dateStr) {
-  const months = ['januari','februari','mars','april','maj','juni','juli','augusti','september','oktober','november','december'];
-  const d = new Date(dateStr);
-  return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+function formatDate(d) {
+    const m = ['jan','feb','mar','apr','maj','jun','jul','aug','sep','okt','nov','dec'];
+    const dt = new Date(d);
+    return dt.getDate() + ' ' + m[dt.getMonth()] + ' ' + dt.getFullYear();
 }
 
-async function loadAndRender() {
-  const params = new URLSearchParams(window.location.search);
-  const postFile = params.get('post');
-  
-  if (!postFile) {
-    document.getElementById('article-container').innerHTML = '<div class="loading">Inget inlägg angivet.</div>';
-    return;
-  }
+function injectArticleSchema(data, filename) {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": data.title || "",
+        "description": data.excerpt || "",
+        "author": {
+            "@type": "Person",
+            "name": data.author || "Jens Hector",
+            "url": "https://ignicon.se/#about",
+            "jobTitle": "VD & Ledarskapsutvecklare",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Ignicon AB"
+            }
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Ignicon AB",
+            "url": "https://ignicon.se",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ignicon.se/jens-hector.jpg"
+            }
+        },
+        "datePublished": data.date || "",
+        "dateModified": data.date || "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://ignicon.se/inlagg.html?post=" + filename
+        },
+        "url": "https://ignicon.se/inlagg.html?post=" + filename,
+        "inLanguage": "sv-SE",
+        "articleSection": data.category || "Ledarskap",
+        "isPartOf": {
+            "@type": "Blog",
+            "name": "Artiklar & Tankar",
+            "url": "https://ignicon.se/blogg.html"
+        }
+    };
 
-  const res = await fetch(`/_posts/${postFile}`);
-  if (!res.ok) {
-    document.getElementById('article-container').innerHTML = '<div class="loading">Kunde inte ladda inlägget.</div>';
-    return;
-  }
-
-  const text = await res.text();
-  const { data, content } = parseFrontmatter(text);
-
-  // Uppdatera title och meta
-  document.title = `${data.title} | Ignicon AB`;
-  document.getElementById('meta-desc').content = data.excerpt || '';
-  document.getElementById('breadcrumb-title').textContent = data.title;
-
-  const html = `
-    <header class="article-header">
-      <span class="article-category">${data.category || 'Ledarskap'}</span>
-      <h1>${data.title}</h1>
-      <div class="article-meta">
-        <div class="author-block">
-          <div class="author-avatar">JH</div>
-          <div>
-            <div class="author-name">Jens Hector</div>
-            <div>Grundare, Ignicon AB</div>
-          </div>
-        </div>
-        <span>·</span>
-        <span>${formatDate(data.date)}</span>
-        <span>·</span>
-        <span>${data.readtime || '5 min läsning'}</span>
-      </div>
-    </header>
-
-    <article class="article-body">
-      ${marked.parse(content)}
-    </article>
-
-    <div class="author-bio">
-      <div class="author-bio-inner">
-        <div class="author-bio-avatar">JH</div>
-        <div>
-          <h4>Jens Hector</h4>
-          <p>Grundare och VD på Ignicon AB. Arbetar med ledare, ledningsgrupper och team som vill nå sin fulla potential.</p>
-        </div>
-      </div>
-    </div>`;
-
-  document.getElementById('article-container').innerHTML = html;
+    const scriptTag = document.createElement('script');
+    scriptTag.type = 'application/ld+json';
+    scriptTag.textContent = JSON.stringify(schema, null, 2);
+    document.head.appendChild(scriptTag);
 }
 
-loadAndRender();
+function injectBreadcrumbSchema(data, filename) {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Hem",
+                "item": "https://ignicon.se/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Artiklar & Tankar",
+                "item": "https://ignicon.se/blogg.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": data.title || "Artikel"
+            }
+        ]
+    };
 
-// Mobilmeny
-document.getElementById('navBurger').addEventListener('click', () => {
-  document.getElementById('navLinks').classList.toggle('open');
-});
+    const scriptTag = document.createElement('script');
+    scriptTag.type = 'application/ld+json';
+    scriptTag.textContent = JSON.stringify(schema, null, 2);
+    document.head.appendChild(scriptTag);
+}
+
+function updateMetaTags(data, filename) {
+    document.title = (data.title || 'Inlägg') + ' | Ignicon AB';
+
+    const setMeta = (attr, key, value) => {
+        let el = document.querySelector('meta[' + attr + '="' + key + '"]');
+        if (!el) { el = document.createElement('meta'); el.setAttribute(attr, key); document.head.appendChild(el); }
+        el.setAttribute('content', value);
+    };
+
+    setMeta('name', 'description', data.excerpt || '');
+    setMeta('property', 'og:title', (data.title || '') + ' | Ignicon AB');
+    setMeta('property', 'og:description', data.excerpt || '');
+    setMeta('property', 'og:url', 'https://ignicon.se/inlagg.html?post=' + filename);
+    setMeta('property', 'og:image', 'https://ignicon.se/jens-hector.jpg');
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.href = 'https://ignicon.se/inlagg.html?post=' + filename;
+}
+
+async function loadPost() {
+    const filename = new URLSearchParams(window.location.search).get('post');
+    if (!filename) { renderError('Inget inlägg angivet.'); return; }
+
+    try {
+        const res = await fetch('_posts/' + filename);
+        if (!res.ok) throw new Error('404');
+        const text = await res.text();
+        const { data, content } = parseFrontmatter(text);
+
+        updateMetaTags(data, filename);
+        injectArticleSchema(data, filename);
+        injectBreadcrumbSchema(data, filename);
+        renderPost(data, content);
+    } catch(e) {
+        renderError('Inlägget kunde inte laddas.');
+    }
+}
+
+function renderPost(data, content) {
+    const html = marked.parse(content);
+    const emojiMap = {'Ledarskap':'🎓','Grupputveckling':'👥','Ledningsgrupp':'🏢','Coaching':'💡','Organisation':'🔥'};
+    const emoji = emojiMap[data.category] || '📖';
+
+    document.getElementById('post-root').innerHTML =
+        '<section class="post-hero">' +
+            '<div class="hero-bg-text">' + emoji + '</div>' +
+            '<div class="post-hero-inner">' +
+                '<div class="post-eyebrow">' +
+                    '<a href="/blogg.html" class="back-link">← Alla artiklar</a>' +
+                    '<span class="post-category">' + (data.category || '') + '</span>' +
+                '</div>' +
+                '<h1>' + (data.title || '') + '</h1>' +
+                '<p class="post-meta">' +
+                    '<span>' + (data.author || 'Ignicon') + '</span>' +
+                    '<span>' + (data.date ? formatDate(data.date) : '') + '</span>' +
+                    (data.readtime ? '<span>' + data.readtime + '</span>' : '') +
+                '</p>' +
+            '</div>' +
+        '</section>' +
+        '<article class="post-body">' + html + '</article>' +
+        '<div class="post-cta">' +
+            '<h3>Vill du veta mer?</h3>' +
+            '<p>Vi hjälper chefer och team att utvecklas – hela vägen till resultat.</p>' +
+            '<a href="/index.html#contact" class="cta-btn">Kontakta oss</a>' +
+        '</div>' +
+        '<div class="back-section">' +
+            '<a href="/blogg.html" class="back-btn">← Tillbaka till alla artiklar</a>' +
+        '</div>';
+}
+
+function renderError(msg) {
+    document.getElementById('post-root').innerHTML = '<div class="loading">' + msg + ' <a href="/blogg.html" style="color:#E8571A">Gå tillbaka</a></div>';
+}
+
+loadPost();
 </script>
 </body>
 </html>
